@@ -9,4 +9,10 @@ param(
 [string]$pattern
 )
 $content=get-content $path
-$content -like $pattern
+if($content -like $pattern)
+{
+ Write-Host("Given text found!")
+}
+else{
+Write-Host("Given text doesn't exit found!")
+}
